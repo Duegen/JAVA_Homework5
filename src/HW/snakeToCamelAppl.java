@@ -5,7 +5,7 @@ public class snakeToCamelAppl {
 	public static void main(String[] args) {
 		System.out.println("Homework 5: snake to camel string transformation\n");
 		
-		String snakeExample = "asv_fgh_iop";
+		String snakeExample = "a9sv_2fgh_i1op5";
 		System.out.println("Example snake string: " + snakeExample);
 		System.out.println("Append method result: " + snakeToCamelAppendMethod(snakeExample));
 		System.out.println("Delete method result: " + snakeToCamelDeleteMethod(snakeExample));
@@ -20,7 +20,7 @@ public class snakeToCamelAppl {
 			return "";
 		StringBuilder camel = new StringBuilder();
 		for (int i = 0; i < snake.length(); i++) {
-			if (Character.isLetter(snake.charAt(i))) {
+			if (Character.isLetterOrDigit(snake.charAt(i))) {
 				if (i != 0 && camel.length() != 0 && flag_) {
 					camel.append(Character.toUpperCase(snake.charAt(i)));
 				} else {
@@ -39,7 +39,7 @@ public class snakeToCamelAppl {
 			return "";
 		StringBuilder camel = new StringBuilder(snake);
 		for (int i = 0; i < camel.length(); i++) {
-			if (Character.isLetter(camel.charAt(i)) || camel.charAt(i) == '_') {
+			if (Character.isLetterOrDigit(camel.charAt(i)) || camel.charAt(i) == '_') {
 				if (Character.isLetter(camel.charAt(i)))
 					camel.setCharAt(i, Character.toLowerCase(camel.charAt(i)));
 				if (camel.charAt(i) == '_')
@@ -49,7 +49,7 @@ public class snakeToCamelAppl {
 							i--;
 							continue;
 						}
-						if (Character.isLetter(camel.charAt(i + 1))) {
+						if (Character.isLetterOrDigit(camel.charAt(i + 1))) {
 							camel.setCharAt(i + 1, Character.toUpperCase(camel.charAt(i + 1)));
 							camel.deleteCharAt(i);
 						} else {

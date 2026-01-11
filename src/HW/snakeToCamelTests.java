@@ -10,7 +10,7 @@ class snakeToCamelTests {
 void snakeToCamelAppend() {
 	assertEquals("", snakeToCamelAppl.snakeToCamelAppendMethod(null));
 	assertEquals("", snakeToCamelAppl.snakeToCamelAppendMethod("   \t"));
-	assertEquals("", snakeToCamelAppl.snakeToCamelAppendMethod("   ^6; ;"));
+	assertEquals("", snakeToCamelAppl.snakeToCamelAppendMethod("   ^; ;"));
 	
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod("asv_fgh_iop"));
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod("_asv_fgh_iop"));
@@ -20,7 +20,7 @@ void snakeToCamelAppend() {
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod("ASV_FGH_IOP_"));
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod(";?ASV_FGH_IOP_"));
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod("  ?ASV_FGH_IOP_ ,"));
-	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod("a9sv_fg,h_iop"));
+	assertEquals("a9sv2fghIop5", snakeToCamelAppl.snakeToCamelAppendMethod("a9sv_2fg,h_iop5"));
 	
 	assertNotEquals("asvFghIop", snakeToCamelAppl.snakeToCamelAppendMethod("asv_9fgh"));
 }
@@ -29,7 +29,7 @@ void snakeToCamelAppend() {
 void snakeToCamelDelete() {
 	assertEquals("", snakeToCamelAppl.snakeToCamelDeleteMethod(null));
 	assertEquals("", snakeToCamelAppl.snakeToCamelDeleteMethod("   \t"));
-	assertEquals("", snakeToCamelAppl.snakeToCamelDeleteMethod("   ^6; ;"));
+	assertEquals("", snakeToCamelAppl.snakeToCamelDeleteMethod("   ^; ;"));
 	
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod("asv_fgh_iop"));
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod("_asv_fgh_iop"));
@@ -39,7 +39,7 @@ void snakeToCamelDelete() {
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod("ASV_FGH_IOP_"));
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod(";?ASV_FGH_IOP_"));
 	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod("  ?ASV_FGH_IOP_ ,"));
-	assertEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod("a9sv_fg,h_iop"));
+	assertEquals("a9sv2fghIop5", snakeToCamelAppl.snakeToCamelDeleteMethod("a9sv_2fg,h_iop5"));
 	
 	assertNotEquals("asvFghIop", snakeToCamelAppl.snakeToCamelDeleteMethod("asv_9fgh"));
 }
