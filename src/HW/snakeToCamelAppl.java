@@ -16,9 +16,7 @@ public class snakeToCamelAppl {
 
 	public static String snakeToCamelAppendMethod(String snake) {
 		boolean flag_ = false;
-		if (snake == null)
-			return null;
-		if (snake.isBlank())
+		if (snake == null || snake.isBlank())
 			return "";
 		StringBuilder camel = new StringBuilder();
 		for (int i = 0; i < snake.length(); i++) {
@@ -37,9 +35,7 @@ public class snakeToCamelAppl {
 	}
 
 	public static String snakeToCamelDeleteMethod(String snake) {
-		if (snake == null)
-			return null;
-		if (snake.isBlank())
+		if (snake == null || snake.isBlank())
 			return "";
 		StringBuilder camel = new StringBuilder(snake);
 		for (int i = 0; i < camel.length(); i++) {
